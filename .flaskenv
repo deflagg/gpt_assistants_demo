@@ -1,0 +1,1 @@
+export FLASK_APP=gpt_assistants_demo.py

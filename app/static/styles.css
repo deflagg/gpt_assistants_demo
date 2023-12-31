@@ -1,0 +1,11 @@
+/* Updated custom CSS */
+#chat-container {
+    min-height: calc(100vh - 150px); /* Adjust this value as needed */
+    max-height: 400px; /* Set a maximum height if desired */
+    overflow-y: auto;
+}
+
+.sidebar {
+    background-color: #f8f9fa; /* Set a background color for the sidebar */
+    min-height: 100vh;
+}
