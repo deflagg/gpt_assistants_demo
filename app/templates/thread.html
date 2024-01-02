@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="card-body" id="chat-container">
+        {% for message in form.messages %}
+            {% if message.role == "user" %}
+                <div class="alert alert-primary" role="alert">You: {{ message.content }}</div>
+            {% else %}
+                <div class="alert alert-success" role="alert">ChatGPT: {{ message.content }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="card-footer">
+        <div class="input-group">
+            {{ form.prompt(class="form-control") }}
+            <div class="input-group-append">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}
